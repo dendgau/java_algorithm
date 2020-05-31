@@ -7,7 +7,7 @@ package algorithm;
 
 import java.lang.reflect.Method;
 import java.util.*;
-import sort.Manufacturing;
+import sort.*;
 
 /**
  *
@@ -17,7 +17,7 @@ public class Algorithm {
     
     int MIN_NUM = 0;
     int MAX_NUM = 10000000;
-    int LENGTH = 5000;
+    int LENGTH = 10000;
     
     /**
      * @param args the command line arguments
@@ -51,7 +51,7 @@ public class Algorithm {
         // Run sort action of list instance
         long startTime, endTime;
         double duration;
-        for (sort.BaseSort sortInstance:manufacturing.getListInstanceSort()) {
+        for (BaseSort sortInstance:manufacturing.getListInstanceSort()) {
             // Run process sort
             startTime = System.currentTimeMillis();
             sortInstance.run();
