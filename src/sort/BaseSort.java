@@ -27,12 +27,10 @@ abstract public class BaseSort
      * Constructor of SortBase class
      * @param arrInt 
      */
-    BaseSort(ArrayList<Integer> arrInt, String sortName)
+    BaseSort(ArrayList<Integer> arrInt)
     {
         this.arrInt = new ArrayList<Integer>(arrInt);
-        this.sortName = sortName;
-        
-        sortName = "con cac chung may";
+        this.setName(this.getClass().getSimpleName());
     } 
     
     /**
@@ -51,6 +49,27 @@ abstract public class BaseSort
     public String getName()
     {
         return this.sortName;
+    }
+    
+    /**
+     * Set name of sort type
+     * @return 
+     */
+    public void setName(String sortName)
+    {
+        this.sortName = sortName;
+    }
+    
+    /**
+     * Swap 2 number in array
+     * @param n
+     * @param m 
+     */
+    protected void swap(int n, int m) 
+    {
+        int temp = this.arrInt.get(n);
+        this.arrInt.set(n, this.arrInt.get(m));
+        this.arrInt.set(m, temp);
     }
     
     /**

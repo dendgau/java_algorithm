@@ -19,7 +19,7 @@ public class QuickSort extends BaseSort
      */
     public QuickSort(ArrayList<Integer> arrInt)
     {
-        super(arrInt, "QuickSort");
+        super(arrInt);
     }
 
     @Override
@@ -56,9 +56,7 @@ public class QuickSort extends BaseSort
             }
             
             if (i <= j) {
-                int temp = this.arrInt.get(i);
-                this.arrInt.set(i, this.arrInt.get(j));
-                this.arrInt.set(j, temp);
+                this.swap(i, j);
                 i++;
                 j--;
             }

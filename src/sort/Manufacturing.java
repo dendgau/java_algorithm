@@ -23,8 +23,8 @@ public class Manufacturing
      */
     private String[] SORT_TYPE = {
         "QuickSort",
+        "BubbleSort",
         "SelectionSort",
-        "BubbleSort"
     };
     
     /**

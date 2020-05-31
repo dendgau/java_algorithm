@@ -16,8 +16,8 @@ import sort.Manufacturing;
 public class Algorithm {
     
     int MIN_NUM = 0;
-    int MAX_NUM = 100000;
-    int LENGTH = 20;
+    int MAX_NUM = 10000000;
+    int LENGTH = 200;
     
     /**
      * @param args the command line arguments
@@ -45,7 +45,7 @@ public class Algorithm {
         
         // Create manufacturing instance
         Object[] args = new Object[1];
-        args[0] = arrInt;
+        args[0] = arrInt.clone();
         Manufacturing manufacturing = new Manufacturing(args);
         
         // Run sort action of list instance
@@ -56,7 +56,7 @@ public class Algorithm {
             startTime = System.currentTimeMillis();
             sortInstance.run();
             endTime = System.currentTimeMillis();
-            duration = (double) ((endTime - startTime) / 1000);
+            duration = (double) ((endTime - startTime));
             
             // Print result
             this.printResult(
@@ -85,7 +85,7 @@ public class Algorithm {
         
         if (executeTime > -1) {
             System.out.println();
-            System.out.printf("Execute time: %ss", executeTime);
+            System.out.printf("Execute time: %sms", executeTime);
         }
         
         System.out.println();
