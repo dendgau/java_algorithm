@@ -17,7 +17,7 @@ public class Algorithm {
     
     int MIN_NUM = 0;
     int MAX_NUM = 10000000;
-    int LENGTH = 200;
+    int LENGTH = 5000;
     
     /**
      * @param args the command line arguments

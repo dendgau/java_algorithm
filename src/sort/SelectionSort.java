@@ -29,11 +29,11 @@ public class SelectionSort extends BaseSort
         for (int i = 0; i < length - 1; i++) {
             int selection = i;
             for (int j = (i + 1); j < length; j++) {
-                if (this.arrInt.get(selection) > this.arrInt.get(j)) {
-                    this.swap(selection, j);
+                if (this.arrInt.get(j) < this.arrInt.get(selection)) {
                     selection = j;
                 }
             }
+            this.swap(selection, i);
         }
     }
 }

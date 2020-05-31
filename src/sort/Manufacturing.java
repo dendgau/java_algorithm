@@ -25,6 +25,7 @@ public class Manufacturing
         "QuickSort",
         "BubbleSort",
         "SelectionSort",
+        "DefaultSort"
     };
     
     /**
