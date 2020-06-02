@@ -11,13 +11,13 @@ import java.util.*;
  * Quick sort class
  * @author BeeBee
  */
-public class SelectionSort extends BaseSort
+public class InsertionSort extends BaseSort
 { 
     /**
      * Constructor of QuickSort class
      * @param arrInt 
      */
-    public SelectionSort(ArrayList<Integer> arrInt)
+    public InsertionSort(ArrayList<Integer> arrInt)
     {
         super(arrInt);
     }
@@ -26,15 +26,16 @@ public class SelectionSort extends BaseSort
     public void run()
     {
         int length = this.arrInt.size();
-        int selection, i, j;
-        for (i = 0; i < length - 1; i++) {
-            selection = i;
-            for (j = (i + 1); j < length; j++) {
-                if (this.arrInt.get(j) < this.arrInt.get(selection)) {
-                    selection = j;
-                }
+        int current, i, j;
+        
+        for (i = 1; i < length; i++) {
+            current = this.arrInt.get(i);
+            j = (i - 1);
+            while (j >= 0 && current < this.arrInt.get(j)) {
+                this.arrInt.set(j + 1, this.arrInt.get(j));
+                j--;
             }
-            this.swap(selection, i);
+            this.arrInt.set(j + 1, current);
         }
     }
 }

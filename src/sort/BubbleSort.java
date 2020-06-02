@@ -26,8 +26,9 @@ public class BubbleSort extends BaseSort
     public void run()
     {
         int length = this.arrInt.size();
-        for (int i = (length - 1); i >= 0; i--) {
-            for (int j = 0; j < i; j++) {
+        int i, j;
+        for (i = (length - 1); i >= 0; i--) {
+            for (j = 0; j < i; j++) {
                 if (this.arrInt.get(j) > this.arrInt.get(j + 1)) {
                     this.swap(j, j + 1);
                 }

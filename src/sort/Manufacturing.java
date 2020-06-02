@@ -22,9 +22,10 @@ public class Manufacturing
      * Store list name of sort type
      */
     private String[] SORT_TYPE = {
-        "QuickSort",
         "BubbleSort",
         "SelectionSort",
+        "InsertionSort",
+        "QuickSort",
         "DefaultSort"
     };
     
